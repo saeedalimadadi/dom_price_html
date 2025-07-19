@@ -12,9 +12,9 @@
 کد زیر را به فایل **`functions.php`** قالب فعال وردپرس خود یا در یک افزونه سفارشی اضافه کنید.
 
 ```php
-add_filter('woocommerce_get_price_html', 'taktheme_dom_price_html', 10, 2);
+add_filter('woocommerce_get_price_html', 'dom_price_html', 10, 2);
 
-function taktheme_dom_price_html($price, $product) {
+function dom_price_html($price, $product) {
     // فقط در بخش کاربری سایت اجرا شود و نه در پنل مدیریت
     if (is_admin()) {
         return $price;
